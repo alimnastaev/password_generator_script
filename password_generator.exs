@@ -22,6 +22,11 @@ defmodule PasswordGenerator do
   @alphabet @letters |> String.split("", trim: true)
 
   def run() do
+    IO.puts(~s{\n You will be asked a few questions to generate your password! \n
+    - your password should be at least 10 characters long
+    - to include numbers or/and special characters, answer Yes or No
+    })
+
     length = get_length()
     integers = with_numbers?()
     special = with_special_characters?()
