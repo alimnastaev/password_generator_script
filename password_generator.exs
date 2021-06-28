@@ -44,7 +44,7 @@ defmodule PasswordGenerator do
       1..length
       |> Enum.reduce("", fn _, result -> result <> Enum.random(list) end)
 
-    IO.puts("\n#{result}")
+    IO.puts(yellow_color() <> "\nYour password is: \n" <> reset_color() <> "#{result}")
   end
 
   #### HELPERS ####
